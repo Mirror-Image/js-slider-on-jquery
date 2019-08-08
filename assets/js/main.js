@@ -21,12 +21,12 @@ function prevSlide() {
 
 function goToSlide(n) {
     $($slider[currentSliderItem]).toggleClass('active');
-    $($indItem[currentSliderItem]).attr('class', 'far fa-circle'); // !!!
+    $($indItem[currentSliderItem]).attr('class', 'far fa-circle indicator');
 
     currentSliderItem = ($slider.length + n) % $slider.length;
 
     $($slider[currentSliderItem]).toggleClass('active');
-    $($indItem[currentSliderItem]).attr('class', 'fas fa-circle'); // !!!
+    $($indItem[currentSliderItem]).attr('class', 'fas fa-circle indicator');
 }
 
 function pauseSlideShow() {
@@ -61,9 +61,9 @@ $previousButton.on('click', () => {
 $indContainer.on('click', (event) => {
     let target = event.target;
 
-    if (target.classList.contains("indicator")) {
+    if (target.classList.contains('indicator')) {
         pauseSlideShow();
-        goToSlide(+target.getAttribute("data-slide-to"));
+        goToSlide(+target.getAttribute('data-slide-to'));
     }
 });
 

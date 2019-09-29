@@ -1,2 +1,2 @@
 **Check out the result on page:**
-https://maksimborovik.github.io/js-slider-on-jquery/
+https://mirrorimage7.github.io/js-slider-on-jquery/
